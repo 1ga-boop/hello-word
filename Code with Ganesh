@@ -1,0 +1,100 @@
+create database FYCS;
+
+show databases;
+
+use FYCS;
+
+CREATE TABLE Employee(EmployeeID int, FirstName varchar (50),lastname varchar (50));
+
+show tables;
+
+desc Employee;
+
+insert into Employee values (1,'raj','patil');
+
+select * from Employee;
+
+insert into Employee (EmployeeID, FirstName,lastName)values (2,'reema','xyz'),(3,'kiran','pqr'),(4,'ravi','stu');
+
+select * from Employee;
+
+update Employee set lastname='VPM'where EmployeeID=2;
+
+select * from Employee ;
+
+select * from Employee where EmployeeID>=1 and EmployeeID<=3;
+
+select firstname from Employee where EmployeeID=4;
+
+select firstName from Employee where EmployeeID<=3;
+
+select FirstName from Employee where lastname like '_P_';
+
+select * from Employee where lastname like '%t__';
+
+select * from Employee;
+
+select EmployeeID,count(*) from Employee group by EmployeeID;
+
+select min(EmployeeID) from Employee;
+
+select max(EmployeeID) from Employee;
+
+select sum(EmployeeID) from Employee;
+
+select avg(EmployeeID) from Employee;
+
+select EmployeeID,FirstName from Employee;
+
+select EmployeeID,FirstName from Employee order BY FirstName;
+
+select EmployeeID,FirstName from Employee order BY FirstName desc;
+
+select * from Employee;
+
+delete from Employee where lastName='VPM';
+
+select * from Employee;
+
+delete from Employee;
+
+select * from Employee;
+
+insert into Employee(EmployeeID,FirstName,lastName)values(2,'reema','xyz'),(3,'kiran','pqr'),(4,'ravi','stu');
+
+select * from Employee;
+
+insert into Employee values(1,'raj','patil');
+
+select * from Employee;
+
+select * from Employee order BY EmployeeID;
+
+insert into Employee values(1,'raj','patil');
+
+select * from Employee;
+
+select FirstName from Employee;
+
+select Distinct FirstName from Employee;
+
+select concat('ganesh','mahind');
+
+select length('ganesh');
+
+select instr('ganesh','a');
+
+select length('ganesh mahind');
+
+select instr('ganesh mahind','h');
+
+select left('ganesh',2);
+
+select right ('ganesh',3);
+
+select lcase('GANESH');
+
+select ucase('ganesh');
+
+select length ('1,2,3,4');
+
